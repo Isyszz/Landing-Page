@@ -1,0 +1,13 @@
+function enviarwhats(event){
+            event.preventDefault();
+            const nome = document.getElementById('nome').value
+            const mensagem = document.getElementById('mensagem').value
+            const telefone = '5585984662473'
+
+            const texto = `Olá, Me chamo ${nome}, ${mensagem}`
+            const msgformatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgformatada}`
+         
+            window.open(url, '_blank')
+        }

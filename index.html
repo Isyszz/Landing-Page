@@ -3,79 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>Landing Page</title>
 </head>
 <body>
+    <div class="particulas"></div>
+
     <nav class="navegacao"> 
         <ul class="menu">
             <li>
-                <a href="#início">Início</a>
+                <a href="#inicio" class="menu-link">Início</a>
             </li>
             <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-             <li>
-                <a href="#projetos">Projetos</a>
+                <a href="#sobre" class="menu-link">Sobre</a>
             </li>
             <li>
-                <a href="#contatos">Contatos</a>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
             </li>
         </ul>
     </nav>
 
-       <main id="inicio" class="cabecalho">
-         <div>
-            <img src="img/Minha Foto.jpeg" alt="Foto de Perfil" class="foto-perfil" >
+    <main id="inicio" class="cabecalho">
+         <img src="img/Minha Foto.jpeg" alt="Foto de Perfil" class="foto-perfil" >
             <h1>Isabella Cavalcante</h1>
-            <p>Desenvolvedora Full Stack em Formação</p>
-         </div>
-       </main>
+                <p class="cabecalho-subtitulo">Desenvolvedora Full Stack em Formação</p>
+    </main>
 
-       <section id="sobre" class="sobre">
+    <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-container">
             <p class="sobre-paragrafo">
             Olá! Sou estudante do ensino médio técnico em Desenvolvimento de Sistemas, com foco em desenvolvimento web e na jornada para me tornar desenvolvedora Full Stack. Tenho experiência no desenvolvimento de interfaces web, escrevo código limpo e organizado, e utilizo Git e GitHub para versionamento dos meus projetos. Tenho interesse especial em back-end e banco de dados, e estou sempre buscando aprender e evoluir na área.
             </p>
         </div>
-       </section>
+    </section>
 
-       <section id="projetos" class="projetos">
+    <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
         <div class="projetos-container">
 
             <div class="projetos-cards">
-            <img src="img/Projeto-Formulário.png" alt="Projeto 1" class="projeto-imagem">
-            <h3 class="info-projetos">Formulário</h3>
-            <p class="paragrafo-projeto">Formulário interativo com validação em JavaScript, integrado ao back-end em PHP para coleta e armazenamento seguro dos dados no banco de dados.</p>
+                <img src="img/Projeto1.jpeg" alt="Projeto 1" class="projeto-imagem">
+
+            <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Formulário</h3>
+                    <p class="paragrafo-projeto">Formulário interativo com validação em JavaScript, integrado ao back-end em PHP para coleta e armazenamento seguro dos dados no banco de dados.</p>
             </div>
 
-             <div class="projetos-cards">
-            <img src="img/Projeto-Lorem-Ipsum.png" alt="Projeto 2" class="projeto-imagem">
-            <h3 class="info-projetos">Lorem ipsum</h3>
-            <p class="paragrafo-projeto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis eveniet adipisci quidem sit. Quasi dignissimos soluta nam ipsum blanditiis quam explicabo asperiores nemo? Perspiciatis sapiente sed qui dignissimos. Itaque, harum.</p>
             </div>
 
-             <div class="projetos-cards">
-            <img src="img/Projeto-Lorem-Ipsum.png" alt="Projeto 3" class="projeto-imagem">
-            <h3 class="info-projetos">Lorem ipsum</h3>
-            <p class="paragrafo-projeto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis eveniet adipisci quidem sit. Quasi dignissimos soluta nam ipsum blanditiis quam explicabo asperiores nemo? Perspiciatis sapiente sed qui dignissimos. Itaque, harum.</p>
+            <div class="projetos-cards">
+                <img src="img/Projeto2.jpeg" 
+                alt="Projeto 2" class="projeto-imagem">
+
+            <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Landing Page</h3>
+                    <p class="paragrafo-projeto">
+                    Site de portfólio pessoal desenvolvido com HTML, CSS e JavaScript, com seções de apresentação, projetos e formulário de contato..</p>
+            </div>
+
+            </div>
+
+            <div class="projetos-cards">
+
+                <img src="img/Projeto-Lorem-Ipsum.png" alt="Projeto 3" class="projeto-imagem">
+
+            <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Aplicação Animada</h3>
+                    <p class="paragrafo-projeto">Aplicação web animada desenvolvida com HTML, CSS e JavaScript, com efeitos visuais e transições para uma experiência interativa.
+                     </p>
+            </div>
+
             </div>
 
         </div>
         </div>
-       </section>
+    </section>
 
-       <section id="contatos" class="contatos">
-         <h2 class="contatos-titulo">Contatos</h2>
-         <form class="contatos-formulario" id="formulario">
-          <div class="campo-form">
-            <input placeholder="Nome" class="campo-form">
-         </div>
-          <div class="grupo-form">
-            <textarea class="campo-form" placeholder="Digite sua Mensagem"></textarea>
-          </div>
+    <section id="contatos" class="contatos">
+         <h2 class="contatos-titulo">Entre em Contato</h2>
+            <form class="contatos-formulario" id="formulario" onsubmit="enviarwhats(event)">
+                <div class="grupo-form">
+                    <input placeholder="Nome" id="nome"class="campo-form">
+                 </div>
+
+                <div class="grupo-form">
+                    <textarea id="mensagem" class="campo-form" rows="6" placeholder="Digite sua Mensagem"></textarea>
+                </div>
+            <button  type="submit" class="botao-form">Enviar WhatsApp</button>
          </form>
-       </section>
+     </section>
 </body>
 </html>
